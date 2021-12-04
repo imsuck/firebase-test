@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "decoded-carport-332213"
+  },
+  "targets": {
+    "decoded-carport-332213": {
+      "hosting": {
+        "firebase-test": [
+          "decoded-carport-332213"
+        ]
+      }
+    }
   }
 }
