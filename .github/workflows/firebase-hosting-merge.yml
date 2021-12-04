@@ -16,10 +16,13 @@ jobs:
               with:
                   node-version: "17.1.0"
 
+            - name: Use angular to build website
             - run: |
                   npm ci
                   npm install -g @angular/cli > /dev/null
                   ng build --prod --output-path=public --base-href="https://decoded-carport-332213.web.app/"
+
+            - name: Deploy to Firebase
             - uses: FirebaseExtended/action-hosting-deploy@v0
               with:
                   repoToken: "${{ secrets.GITHUB_TOKEN }}"
