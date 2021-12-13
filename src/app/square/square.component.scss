@@ -1,9 +1,35 @@
-* {
-	color: #fff;
-}
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+$square-primary: mat.define-palette(mat.$light-blue-palette, 50);
+$square-accent: mat.define-palette(mat.$deep-purple-palette, 700);
+
+$square-warn: mat.define-palette(
+	(
+		A700: #00c853,
+		contrast: (
+			A700: white,
+		),
+	),
+	A700
+);
+
+$square-theme: mat.define-light-theme(
+	(
+		color: (
+			primary: $square-primary,
+			accent: $square-accent,
+			warn: $square-warn,
+		),
+	)
+);
+
+@include mat.all-component-themes($square-theme);
 
 button {
 	width: 100px;
 	height: 100px;
-	font-size: 48px;
+	font-size: 48px !important;
+	color: #fff;
 }

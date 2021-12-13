@@ -22,6 +22,7 @@ import { BoardComponent } from "./board/board.component";
 import { SquareComponent } from "./square/square.component";
 
 import { MatButtonModule } from "@angular/material/button";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
 	declarations: [AppComponent, BoardComponent, SquareComponent],
@@ -37,6 +38,7 @@ import { MatButtonModule } from "@angular/material/button";
 		provideStorage(() => getStorage()),
 		BrowserAnimationsModule,
 		MatButtonModule,
+  FontAwesomeModule,
 	],
 	providers: [ScreenTrackingService, UserTrackingService],
 	bootstrap: [AppComponent],
