@@ -1,0 +1,14 @@
+<h1>Current Player: {{ player }}</h1>
+<h2 *ngIf="winner">{{ winner }} won!</h2>
+
+<div id="grid">
+	<app-square
+		*ngFor="let val of squares; let i = index"
+		[value]="val"
+		(click)="move(i)"
+	></app-square>
+</div>
+
+<button id="restartBtn" mat-raised-button color="primary" (click)="newGame()">
+	New game
+</button>

@@ -18,12 +18,13 @@ import { provideStorage, getStorage } from "@angular/fire/storage";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { environment } from "../environments/environment";
-import { GameGridComponent } from "./game-grid/game-grid.component";
+import { BoardComponent } from "./board/board.component";
+import { SquareComponent } from "./square/square.component";
 
 import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
-	declarations: [AppComponent, GameGridComponent],
+	declarations: [AppComponent, BoardComponent, SquareComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
